@@ -161,6 +161,9 @@ header {
   display: flex;
   padding: 0;
 }
+.detail li {
+  width: 270px;
+}
 .detail > li:not(:last-child) {
   margin-right: 30px;
 }
