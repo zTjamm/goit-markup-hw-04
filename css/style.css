@@ -7,7 +7,6 @@ body {
   font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: normal;
-  max-width: 1600px;
   color: var(--color-black);
   margin: auto;
 }
@@ -103,9 +102,11 @@ header {
   text-align: center;
   background: #2f303a;
   padding: 200px 0;
-  background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(0, 0, 0, 0.4)),
+  background: linear-gradient(rgba(47, 48, 58, 0.3), rgba(0, 0, 0, 0.3)),
     url(../images/bg.jpg);
-  background-size: cover;
+  background-size: 1600px 600px;
+  background-repeat: no-repeat;
+  background-position-x: center;
 }
 .section-one > button a {
   text-decoration: none;
@@ -181,7 +182,7 @@ header {
   line-height: 1.7;
   letter-spacing: 0.03em;
   color: var(--color-gray);
-  }
+}
 /* чем мы занимаемся */
 .doing-name {
   font-weight: bold;
@@ -302,7 +303,7 @@ header {
   align-items: center;
   width: 100%;
   height: 100%;
-  fill: currentColor;
+  fill: var(--color-gray2);
   border: 1px solid var(--color-gray2);
   border-radius: 4px;
 }
@@ -356,7 +357,14 @@ address {
 .footer-one {
   margin-right: 70px;
 }
-
+.footer-link {
+  fill: var(--color-white);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .footer-two > p {
   font-weight: 700;
   font-size: 14px;
@@ -371,9 +379,6 @@ address {
   margin-top: 20px;
 }
 .footer-two > ul > li {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 44px;
   height: 44px;
   fill: var(--color-white);
@@ -421,14 +426,12 @@ address {
 .section-button > li > button:focus {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
-}
-
-.section-button > li:first-child > button {
   background: var(--color-primary);
   color: var(--color-white);
   cursor: pointer;
 }
-.section-button > li > button:hover {
+
+.section-button > li:first-child > button {
   background: var(--color-primary);
   color: var(--color-white);
   cursor: pointer;
@@ -439,12 +442,17 @@ address {
   padding: 0;
   margin: -15px;
 }
-.main a {
+.main > li > a {
+  display: block;
   text-decoration: none;
 }
 .main > li {
   margin: 15px;
   width: 370px;
+}
+.main > li > a {
+  width: 100%;
+  height: 100%;
 }
 .main img {
   display: block;
@@ -481,8 +489,8 @@ address {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-.main > li:hover,
-.main > li:focus {
+.main > li > a:hover,
+.main > li > a:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
@@ -490,12 +498,12 @@ address {
 .svg-mail {
   width: 16px;
   height: 12px;
-  margin-right: 4px;
+  margin-right: 10px;
   fill: currentColor;
 }
 .svg-tel {
   width: 10px;
   height: 16px;
-  margin-right: 4px;
+  margin-right: 10px;
   fill: currentColor;
 }
